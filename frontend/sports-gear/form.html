@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Gear - GearGuard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="sidebar">
+        <div class="logo">
+            <span class="icon">⚡</span>
+            <h1>GearGuard</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="inventory.html">Inventory</a></li>
+            <li><a href="recommendations.html">Recommendations</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <div class="user-snippet">
+            <div class="avatar">U</div>
+            <div>
+                <div style="font-weight: 600;">User</div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <header class="page-header">
+            <h2 id="form-title">Add New Gear</h2>
+            <a href="inventory.html" class="btn secondary">Cancel</a>
+        </header>
+
+        <section class="form-card">
+            <form id="gear-form">
+                <input type="hidden" id="g-current" value="0">
+                <div class="form-group">
+                    <label>Gear Name</label>
+                    <input type="text" id="g-name" required placeholder="e.g. Nike Vaporfly">
+                </div>
+
+                <div class="grid-3" style="margin-bottom:0; gap:20px; grid-template-columns: 1fr 1fr;">
+                    <div class="form-group">
+                        <label>Sport</label>
+                        <select id="g-sport">
+                            <option value="Running">Running</option>
+                            <option value="Tennis">Tennis</option>
+                            <option value="Swimming">Swimming</option>
+                            <option value="Cycling">Cycling</option>
+                            <option value="Gym">Gym</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Type</label>
+                        <input type="text" id="g-type" required placeholder="e.g. Shoes">
+                    </div>
+                </div>
+
+                <div class="grid-3" style="margin-bottom:0; gap:20px; grid-template-columns: 1fr 1fr;">
+                    <div class="form-group">
+                        <label>Tracking Metric</label>
+                        <select id="g-metric">
+                            <option value="km">Kilometers (km)</option>
+                            <option value="hours">Hours</option>
+                            <option value="games">Games/Matches</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Max Usage Lifespan</label>
+                        <input type="number" id="g-max" required placeholder="e.g. 800">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Purchase Date</label>
+                    <input type="date" id="g-date" required>
+                </div>
+
+                <div style="margin-top:40px; text-align:right;">
+                    <button type="submit" class="btn primary">Save Gear</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

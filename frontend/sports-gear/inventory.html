@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory - GearGuard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="sidebar">
+        <div class="logo">
+            <span class="icon">⚡</span>
+            <h1>GearGuard</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="inventory.html" class="active">Inventory</a></li>
+            <li><a href="recommendations.html">Recommendations</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <div class="user-snippet">
+            <div class="avatar">U</div>
+            <div>
+                <div style="font-weight: 600;">User</div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <header class="page-header">
+            <h2>My Gear</h2>
+            <a href="form.html" class="btn primary">+ New Item</a>
+        </header>
+
+        <section>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%">Item</th>
+                        <th>Sport</th>
+                        <th>Usage</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="inventory-body">
+                    <tr>
+                        <td colspan="5" class="empty-state">Loading inventory...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

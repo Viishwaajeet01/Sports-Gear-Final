@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - GearGuard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="sidebar">
+        <div class="logo">
+            <span class="icon">⚡</span>
+            <h1>GearGuard</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="inventory.html">Inventory</a></li>
+            <li><a href="recommendations.html">Recommendations</a></li>
+            <li><a href="profile.html" class="active">Profile</a></li>
+        </ul>
+        <div class="user-snippet">
+            <div class="avatar">U</div>
+            <div>
+                <div style="font-weight: 600;">User</div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <header class="page-header">
+            <h2>User Profile</h2>
+        </header>
+
+        <section class="form-card">
+            <div class="form-group">
+                <label>Display Name</label>
+                <input type="text" value="User">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" value="user@example.com" disabled style="opacity:0.5">
+            </div>
+            <div class="form-group">
+                <label>Preferred Sports</label>
+                <select multiple style="height: 100px;">
+                    <option selected>Running</option>
+                    <option selected>Tennis</option>
+                    <option>Swimming</option>
+                    <option>Cycling</option>
+                </select>
+                <div style="font-size:0.8rem; color: var(--text-secondary); margin-top:5px">Hold Ctrl to select multiple
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-top:30px">
+                <label style="display:flex; align-items:center; gap:10px; cursor:pointer">
+                    <input type="checkbox" checked style="width:auto"> Receive replacement alerts via email
+                </label>
+                <label style="display:flex; align-items:center; gap:10px; cursor:pointer; margin-top:10px">
+                    <input type="checkbox" style="width:auto"> Dark Mode (Always On)
+                </label>
+            </div>
+
+            <div style="margin-top:30px; text-align:right">
+                <button id="save-profile" class="btn primary">Save Settings</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

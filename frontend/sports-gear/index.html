@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - GearGuard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="logo">
+            <span class="icon">⚡</span>
+            <h1>GearGuard</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Dashboard</a></li>
+            <li><a href="inventory.html">Inventory</a></li>
+            <li><a href="recommendations.html">Recommendations</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <div class="user-snippet">
+            <div class="avatar">U</div>
+            <div style="font-size: 0.9rem;">
+                <div style="font-weight: 600;">User</div>
+                <div style="font-size: 0.75rem; color: var(--text-secondary);">Athlete</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="page-header">
+            <h2>Dashboard</h2>
+            <a href="form.html" class="btn primary">+ Add Gear</a>
+        </header>
+
+        <!-- KPI Cards -->
+        <section class="grid-3">
+            <div class="stat-card">
+                <h3>Total Gear</h3>
+                <div class="value" id="total-items">0</div>
+                <div class="trend">Across all sports</div>
+            </div>
+            <div class="stat-card">
+                <h3>Active Sports</h3>
+                <div class="value" id="active-sports">0</div>
+                <div class="trend">tracked</div>
+            </div>
+            <div class="stat-card" style="border-color: var(--warning);">
+                <h3>Replace Soon</h3>
+                <div class="value" id="replace-soon" style="color: var(--warning)">0</div>
+                <div class="trend">Items > 80% usage</div>
+            </div>
+        </section>
+
+        <!-- Quick View -->
+        <section>
+            <div class="page-header">
+                <h3>Recently Added</h3>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Sport</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="recent-list">
+                    <tr>
+                        <td colspan="3" class="empty-state">Loading...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
